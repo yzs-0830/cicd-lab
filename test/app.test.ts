@@ -10,7 +10,7 @@ describe('Fastify app', () => {
     });
 
     expect(response.statusCode).toBe(200);
-    expect(response.json()).toEqual({ status: 'not ok' }); // Should be 'ok'
+    expect(response.json()).toEqual({ status: 'ok' }); // Fixed from 'not ok' to 'ok'
     await app.close();
   });
 
