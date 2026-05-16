@@ -16,7 +16,7 @@ jobs:
   build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -39,7 +39,7 @@ jobs:
       - name: Run Tests
         # Run vitest with both default (console) and junit reporters
         run: npm run test -- --reporter=default --reporter=junit --outputFile.junit=test-results.xml
-        
+
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
